@@ -77,7 +77,7 @@ class ContactFormController extends Controller
     public function show($id)
     {
         //
-        $contact = ContactForm::find(id);
+        $contact = ContactForm::find($id);
 
         return view('contact.show', compact('contact'));
     }

@@ -79,32 +79,32 @@ class ContactFormController extends Controller
         //
         $contact = ContactForm::find($id);
 
-        if($contac->gender === 0){
+        if($contact->gender === 0){
             $gender = '男性';
         }
-        if($contac->gender === 1){
+        if($contact->gender === 1){
             $gender = '女性';
         }
-        if($contac->age === 1){
+        if($contact->age === 1){
             $age = '〜19歳';
         }
-        if($contac->age === 2){
+        if($contact->age === 2){
             $age = '20歳〜29歳';
         }
-        if($contac->age === 3){
+        if($contact->age === 3){
             $age = '30歳〜39歳';
         }
-        if($contac->age === 4){
+        if($contact->age === 4){
             $age = '40歳〜49歳';
         }
-        if($contac->age === 5){
+        if($contact->age === 5){
             $age = '50歳〜59歳';
         }
-        if($contac->age === 6){
+        if($contact->age === 6){
             $age = '60歳〜';
         }
 
-        return view('contact.show', compact('contact'));
+        return view('contact.show', compact('contact','gender','age'));
     }
 
     /**

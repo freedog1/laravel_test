@@ -16,6 +16,12 @@
 
                     showです。
                     {{ $contact->your_name }}
+                    {{ $contact->title }}
+                    {{ $contact->email }}
+                    {{ $contact->url }}
+                    {{ $gender }}
+                    {{ $age }}
+                    {{ $contact->contact }}
                     <form method="GET" action="">
                     @csrf
                     

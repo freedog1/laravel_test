@@ -14,18 +14,18 @@
                         </div>
                     @endif
 
-                    showです。
+                    editです。
                     {{ $contact->your_name }}
                     {{ $contact->title }}
                     {{ $contact->email }}
                     {{ $contact->url }}
-                    {{ $gender }}
-                    {{ $age }}
+                    {{ $contact->gender }}
+                    {{ $contact->age }}
                     {{ $contact->contact }}
                     <form method="GET" action="">
                     @csrf
                     
-                    <input class="btn btn-info" type="submit" value="登録する">
+                    <input class="btn btn-info" type="submit" value="編集する">
                     </form>
                 </div>
             </div>

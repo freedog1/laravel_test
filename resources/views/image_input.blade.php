@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <form action="image_confirm" method="post" enctype="multipart/form-data" id="form">
+    {{-- <form method="POST" action="{{route('image_confirm')}}" enctype="multipart/form-data" id="form"> --}}
+      {{-- <form method="POST" action="{{route('contact.store')}}"> --}}
+      <form action="image_confirm" method="post" enctype="multipart/form-data" id="form">
         @csrf
         <p>ファイル：</p>
         <input type="file" name="imagefile" value=""/><br /><br />

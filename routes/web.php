@@ -35,3 +35,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/qrcode','QrCodeController@index');
+
+//画像保存フォーム
+Route::get('/image_input', 'ImageController@getImageInput');
+Route::post('/image_confirm', 'ImageController@postImageConfirm');
+Route::post('/image_complete', 'ImageController@postImageComplete');

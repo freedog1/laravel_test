@@ -18,6 +18,7 @@ class ContactFormController extends Controller
      */
     public function index(Request $request)
     {
+        // inputメソッドでユーザー入力を取得。
         $search = $request->input('search');
         
         //エロクアント ORマッパー 

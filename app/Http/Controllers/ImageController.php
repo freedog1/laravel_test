@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class ImageController extends Controller
 {
@@ -112,8 +113,9 @@ class ImageController extends Controller
     
         return view('image_confirm', compact('data') );
     }
-    
-    public function getImageComplete(Request $request) {
+
+    public function postImageComplete(Request $request) {//getをpostに変更
+        // dd($request);
         $data = $request->session()->get('data');
         $temp_path = $data['temp_path'];
         $read_temp_path = $data['read_temp_path'];

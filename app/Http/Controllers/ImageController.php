@@ -9,6 +9,7 @@ use App\Models\Product;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
+
 class ImageController extends Controller
 {
     /**
@@ -115,7 +116,7 @@ class ImageController extends Controller
     }
 
     public function postImageComplete(Request $request) {//getをpostに変更
-        // dd($request);
+        
         $data = $request->session()->get('data');
         $temp_path = $data['temp_path'];
         $read_temp_path = $data['read_temp_path'];
@@ -133,10 +134,20 @@ class ImageController extends Controller
         $read_path = str_replace('public/', 'storage/', $storage_path);
         //商品一覧画面から画像を読み込むときのパスはstorage/productimage/xxx.jpeg"
         $product_name = $data['product_name'];
+
+        // dd($product_name);
+
+        $product = new Product;
+        $product->path = $read_path;
+        $product->product_name = $product_name;
+
+        $product->save();
+
     
-        $this->productcontroller->path = $read_path;
-        $this->productcontroller->product_name = $product_name;
-        $this->productcontroller->save();
-        return view('image_complete');
+        // $this->productcontroller->path = $read_path;
+        // $this->productcontroller->product_name = $product_name;
+        // $this->productcontroller->save();
+
+        return view('image_complete', compact('product'));
     }
 }

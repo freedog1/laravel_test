@@ -1,6 +1,6 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app') --}}
 
-@section('content')
+{{-- @section('content') --}}
     {{-- <form method="POST" action="{{route('image_confirm')}}" enctype="multipart/form-data" id="form"> --}}
       {{-- <form method="POST" action="{{route('contact.store')}}"> --}}
       <form action="image_confirm" method="post" enctype="multipart/form-data" id="form">
@@ -13,5 +13,5 @@
 
         <input type="submit" name="confirm" id="button" value="確認" />
     </form>
-@endsection
+{{-- @endsection --}}
 

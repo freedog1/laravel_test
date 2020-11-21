@@ -1,5 +1,5 @@
-@extends('layouts.app')
-@section('content')
+{{-- @extends('layouts.app') --}}
+{{-- @section('content') --}}
     <form action="image_complete" method="post">
         @csrf
         <table border="1">
@@ -14,7 +14,7 @@
         </table>
         <input type="submit" name="action" value="送信" />
     </form>
-@endsection
+{{-- @endsection --}}
 
 {{-- @section('content')
     <p>商品のアップロードが完了しました</p>

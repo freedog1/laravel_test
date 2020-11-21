@@ -39,4 +39,5 @@ Route::get('/qrcode','QrCodeController@index');
 //画像保存フォーム
 Route::get('/image_input', 'ImageController@getImageInput');
 Route::post('/image_confirm', 'ImageController@postImageConfirm');
+Route::get('/image_complete', 'ImageController@getImageInput');
 Route::post('/image_complete', 'ImageController@postImageComplete');
